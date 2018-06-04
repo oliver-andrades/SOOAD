@@ -5,8 +5,104 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Attendence_Counter_ALPHA"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="Attendence Management System" Width="1200">
+    <Grid Margin="25,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="160"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label FontSize="32" HorizontalAlignment="Center">
+            Attendence Management System
+        </Label>
+        <StackPanel  Grid.Row="1">
+            
+            <Line X2="1920" Y1="10" Y2="10" Height="2" Margin="5,0,5,10" Stroke="Black" StrokeThickness="50"/>
+
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center">
+
+                <StackPanel Margin="-20,0,20,0">
+                    <Label FontSize="16">Login to manage attendence records:</Label>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Label Width="80">Enter Name:</Label>
+                        <TextBox Name="userNameBox" Width="250"></TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Label Width="80">Password</Label>
+                        <PasswordBox Name="passwordBox" Width="250"></PasswordBox>
+                    </StackPanel>
+
+                    <Button Name="loginButton" Width="80" Margin="10" HorizontalAlignment="Center" Click="LoginButton_Click">Login</Button>
+                </StackPanel>
+            </StackPanel>
+
+            <Line X2="1920" Height="2" Margin="5,0" Stroke="Black" StrokeThickness="50"/>
+        </StackPanel>
+        <ScrollViewer Grid.Row="2" Margin="35,0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel>
+                        <Label FontSize="16" >Or search by name to view records:</Label>
+
+                        <StackPanel Orientation="Horizontal">
+                            <Label>First Name</Label>
+                            <TextBox Name="searchFirstName" Height="20" Width="200" Margin="5"></TextBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <Label>Last Name</Label>
+                            <TextBox Name="searchLastName" Width="200" Margin="5"></TextBox>
+                            <Button Name="searchLastNameButton" Height="20" Width="50" Click="Search_Click" Margin="5">Search</Button>
+                            <Button Name="displayTeachers" Width="100" Margin="15,5" Click="DisplayTeachers_Click" Visibility="Visible">Show Teachers</Button>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Name="subjectIndexStk" Margin="25,5,0,0" Visibility="Collapsed">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Width="30"></Label>
+                            <Label Width="60" FontSize="10">Subject1</Label>
+                            <Label Width="60" FontSize="10">Subject2</Label>
+                            <Label Width="60" FontSize="10">Subject3</Label>
+                            <Label Width="60" FontSize="10">Subject4</Label>
+                            <Label Width="60" FontSize="10">Subject5</Label>
+                            <Label Width="60" FontSize="10">Subject6</Label>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Width="30" FontSize="10">SE</Label>
+                            <Label Width="60" FontSize="10">Maths-3</Label>
+                            <Label Width="60" FontSize="10">D.S.</Label>
+                            <Label Width="60" FontSize="10">D.L.D.A.</Label>
+                            <Label Width="60" FontSize="10">D.I.S.</Label>
+                            <Label Width="60" FontSize="10">O.O.P.M.</Label>
+                            <Label Width="60" FontSize="10">C.G.</Label>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" >
+                            <Label Width="30" FontSize="10">TE</Label>
+                            <Label Width="60" FontSize="10">C.N.</Label>
+                            <Label Width="60" FontSize="10">M.P.</Label>
+                            <Label Width="60" FontSize="10">O.S.</Label>
+                            <Label Width="60" FontSize="10">S.O.O.A.D.</Label>
+                            <Label Width="60" FontSize="10">-</Label>
+                            <Label Width="60" FontSize="10">-</Label>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Width="30" FontSize="10">BE</Label>
+                            <Label Width="60" FontSize="10">D.W.M.</Label>
+                            <Label Width="60" FontSize="10">C.S.S.</Label>
+                            <Label Width="60" FontSize="10">A.I.</Label>
+                            <Label Width="60" FontSize="10">Elective-2</Label>
+                            <Label Width="60" FontSize="10">-</Label>
+                            <Label Width="60" FontSize="10">-</Label>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+                
+                
+                <StackPanel Name="stk"/>
+
+            </StackPanel>
+        </ScrollViewer>
+
     </Grid>
+    
 </Window>

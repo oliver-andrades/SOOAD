@@ -1,0 +1,89 @@
+﻿<Window x:Class="Attendence_Counter_ALPHA.addUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Attendence_Counter_ALPHA"
+        mc:Ignorable="d"
+        Title="addUserWindow" Height="300" Width="540" ResizeMode="CanMinimize">
+    <StackPanel>
+        <Label FontWeight="Bold" Margin="10">Enter the following details:</Label>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Width="300" HorizontalAlignment="Left">
+
+                    <StackPanel Margin="5" Orientation="Horizontal" >
+                        <Label Width="80">Teacher Id:</Label>
+                        <TextBox Name="newIdBox" Width="100" LostFocus="NewIdBox_LostFocus"></TextBox>
+                        <Label Name="teacherIdLabel" Height="20" Margin="10,0" FontSize="8"></Label>
+                    </StackPanel>
+
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <Label Width="80">First Name:</Label>
+                        <TextBox Name="newFirstNameBox" Width="100" LostFocus="NewNameBox_LostFocus"></TextBox>
+                    </StackPanel>
+
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <Label Width="80">Last Name:</Label>
+                        <TextBox Name="newLastNameBox" Width="100" LostFocus="NewNameBox_LostFocus"></TextBox>
+                        <Label Name="nameErrorLabel" Height="20" Margin="10,0" FontSize="8"></Label>
+                    </StackPanel>
+
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <Label Width="80">Password:</Label>
+                        <TextBox  Name="newPasswordBox" Width="100"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Width="240">
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <Label Width="30">SE:</Label>
+                        <TextBox Name="seSubjectBox" Width="180" LostFocus="NewNameBox_LostFocus"></TextBox>
+                    </StackPanel>
+
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <Label Width="30">TE:</Label>
+                        <TextBox Name="teSubjectBox" Width="180" LostFocus="NewNameBox_LostFocus"></TextBox>
+                    </StackPanel>
+
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <Label Width="30">BE:</Label>
+                        <TextBox Name="beSubjectBox" Width="180" LostFocus="NewNameBox_LostFocus"></TextBox>
+                    </StackPanel>
+
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <Label Width="100">Class teacher of:</Label>
+                        <Button Name="classSelector" Click="ClassButton_Click" Height="20" Margin=" 5,0,50,0">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Name="classButtonLabel" Text="-Class-" Margin ="5,0,0,0" Width="45"/>
+                                    <Line X1="2"  Height="15" Width="1" Stroke="Black" StrokeThickness="50"/>
+                                    <Path x:Name="BtnArrow" Margin="4" VerticalAlignment="Center" Width="6" Fill="#FF527DB5" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "/>
+                                </StackPanel>
+                            </Button.Content>
+                            <Button.ContextMenu>
+                                <ContextMenu >
+                                    <MenuItem Header="N/A" Click="NA_Click"/>
+                                    <MenuItem Header="SE" Click="SE_Click"/>
+                                    <MenuItem Header="TE" Click="TE_Click"/>
+                                    <MenuItem Header="BE" Click="BE_Click"/>
+                                </ContextMenu>
+                            </Button.ContextMenu>
+                        </Button>
+                    </StackPanel>
+
+                    
+                </StackPanel>
+
+            </StackPanel>
+
+            <StackPanel Margin="25" Orientation="Horizontal">
+                <Label Width="80">Make Admin:</Label>
+                <CheckBox Name="isAdmin" Margin="5"/>
+                <Button Name="addUserButton" Click="AddUserButton_Click" Width="180" Margin="50,5">Submit</Button>
+            </StackPanel>
+
+        </StackPanel>
+        
+    </StackPanel>
+</Window>

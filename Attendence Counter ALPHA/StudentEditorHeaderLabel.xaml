@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Attendence_Counter_ALPHA.StudentEditorHeaderLabel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Attendence_Counter_ALPHA"
+             mc:Ignorable="d" 
+             d:DesignHeight="53" d:DesignWidth="111">
+    <StackPanel Orientation="Horizontal" Width="117">
+        <Line X1="2" Y1="50"  Height="50" Width="2" Stroke="Black" StrokeThickness="50"/>
+        
+        <StackPanel HorizontalAlignment="Center">
+            <Label Name="subLabel" HorizontalContentAlignment="Center" FontWeight="Bold">test</Label>
+            <Line X1="00" X2="100" Y1="0" Y2="0"  Height="1" Width="100" Stroke="Black"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Name="pLabel" VerticalAlignment="Center" Width="50" HorizontalContentAlignment="Center">Present</Label>
+                <Line X1="2" Y1="15"  Height="15" Width="1" Stroke="Black" StrokeThickness="25"/>
+                <Label Name="percentLabel" VerticalAlignment="Center" Width="50" HorizontalContentAlignment="Center">Absent</Label>
+            </StackPanel>
+            
+        </StackPanel>
+        
+    </StackPanel>
+</UserControl>

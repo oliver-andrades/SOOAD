@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="Attendence_Counter_ALPHA.TeacherRow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Attendence_Counter_ALPHA"
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="800">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" >
+
+            <Label Name="idLabel" VerticalAlignment="Center" Width="30" Margin="5" BorderThickness="2" BorderBrush="Red" ></Label>
+            <Label Name="firstNameLabel" VerticalAlignment="Center" Width="80" Margin="5" BorderThickness="2" BorderBrush="Blue" ></Label>
+            <Label Name="lastNameLabel" VerticalAlignment="Center" Width="80" Margin="5" BorderThickness="2" BorderBrush="Blue" ></Label>
+            <Label Name="seLabel" VerticalAlignment="Center" Width="60" Margin="5" BorderThickness="2" BorderBrush="Green" ></Label>
+            <Label Name="teLabel" VerticalAlignment="Center" Width="60" Margin="5" BorderThickness="2" BorderBrush="Green" ></Label>
+            <Label Name="beLabel" VerticalAlignment="Center" Width="60" Margin="5" BorderThickness="2" BorderBrush="Green" ></Label>
+            <Label Name="hodLabel" VerticalAlignment="Center" Width="50" Margin="5" BorderThickness="2" BorderBrush="Red" ></Label>
+            <Label Name="classTeacherLabel" VerticalAlignment="Center" Width="80" Margin="5" BorderThickness="2" BorderBrush="Red" ></Label>
+
+        </StackPanel>
+
+        <StackPanel Name="auth" Orientation="Horizontal" >
+
+            <Label Name="saltLabel" VerticalAlignment="Center" Width="160" Margin="10" BorderThickness="2" BorderBrush="Yellow" ></Label>
+            <Label Name="SaltedHashedPasswordLabel" VerticalAlignment="Center" Width="400" Margin="10" BorderThickness="2" BorderBrush="Yellow" ></Label>
+
+        </StackPanel>
+    </StackPanel>
+</UserControl>

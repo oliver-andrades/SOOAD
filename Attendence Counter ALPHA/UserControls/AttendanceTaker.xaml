@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="Attendence_Counter_ALPHA.AttendanceTaker"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Attendence_Counter_ALPHA"
+             mc:Ignorable="d"  >
+    <StackPanel Name="attakstk" HorizontalAlignment="Center">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label Name="markedRollNoLabel" HorizontalAlignment="Center" Width="60" FontSize="16" Margin="5"/>
+            <Label Name="markedNameLabel" HorizontalAlignment="Center" Width="200" FontSize="16" Margin="5"/>
+            <Label Name="markedPresentLabel" HorizontalAlignment="Center" Width="50" FontSize="16"  Background="LightGreen" Margin="5"/>
+            <Label Name="markedAbsentLabel" HorizontalAlignment="Center" Width="50" FontSize="16" Background="OrangeRed" Margin="5"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label Name="rollNoLabel" HorizontalAlignment="Center" Width="60" FontSize="24" Margin="5"/>
+            <Label Name="nameLabel" HorizontalAlignment="Center" Width="200" FontSize="24" Margin="5"/>
+            <Label Name="presentLabel" HorizontalAlignment="Center" Width="50" FontSize="24" Background="LightGreen" Margin="5"/>
+            <Label Name="absentLabel" HorizontalAlignment="Center" Width="50" FontSize="24" Background="OrangeRed" Margin="5"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Name="presentButton" Background="LawnGreen" HorizontalAlignment="Center" Width="50" Content="Present" Margin="10" Click="PresentButton_Click"/>
+            <Button Name="absentButton" Background="Red" HorizontalAlignment="Center" Width="50" Content="Absent" Margin="10" Click="AbsentButton_Click"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>
